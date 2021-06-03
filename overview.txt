@@ -1,0 +1,34 @@
+Twitter API
+    Read Elon Musk Posts from Twitter
+    save these posts into MongoDB as json
+    
+
+    make a dictioanry of words to look for in the posts 
+        crypto words
+    
+    store these posts in postgres DB
+    make queries with regex from dictioanry
+        containg(Coin and Datetime)
+
+
+
+get api from a crypotmarket Page
+    Coinname, price, Datetime 
+
+
+Combination:
+look for the impact of elon to that specific price
+
+
+
+ML PArt
+dictionary for triggerwords 
+score = (what percentage of words are crypto related)
+check if tweets with higher score correlate with the price
+
+look at the exampled for tweets and influence and price (average the price somehow, when start averaging the price after tweet, look at the delay between post an price developement)
+
+build a model that predicts the influence of special words on the market
+
+model that connects score of tweet and the price of Coin
+for example one coin: Dogecoin

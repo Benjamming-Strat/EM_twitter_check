@@ -1,0 +1,30 @@
+Guideline for the Final Project
+
+    Storing Tweets in a MongoDB
+        -building the twitter API
+            
+        - storing tweets in MongoDB
+        
+
+Néw File
+        - build a dictionary with coin related words
+        - read Data from mongoDB
+        - check tweets for coin related news
+
+Get Coin Prices from Another API
+    -find out price what the day after tweet
+    - get the ratio of price
+
+Sentiment Analysis
+    - to have features
+    - prepare data for the model
+    - 
+
+Algorithm to score
+    - ratio of yesterday and tomorrow
+
+hypothesis:
+x is a combination of:
+    is there a correlation between the sentiment of a post
+    number of tweets
+y is the price-ratio
