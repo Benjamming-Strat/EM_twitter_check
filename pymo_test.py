@@ -6,12 +6,14 @@ import pymongo
 
 # collection.insert_many([post,post2])
 
-conn = pymongo.MongoClient()
-db = conn.get_database('tweets')
-collection = db.get_collection("tweet_data")
-cursor = collection.find({"text":"Hallo"})
+# conn = pymongo.MongoClient()
+# db = conn.get_database('tweets')
+# collection = db.get_collection("tweet_data")
+# cursor = collection.find()
 
-if cursor.count()==0:
-    print("There is no tweet like this")
-else:
-    print("uh lala u got some real shit done hon")
+# if cursor.count()==0:
+#     print("There is no tweet like this")
+# else:
+#     for i in cursor:
+#         print(i)
+

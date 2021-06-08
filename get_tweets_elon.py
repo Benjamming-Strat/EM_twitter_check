@@ -9,7 +9,6 @@ import pymongo
 
 collect elon musk's tweets, store it in mongoDataBase
 
-
 '''
 
 def authenticate():
@@ -61,10 +60,8 @@ if __name__ == '__main__':
     id = 0
     
     for status in cursor.items(500):
-        id += 1
-        print(id)
-        
-        
+        id += 1       
+        print(f'checking post number: {id}')
         text = status.full_text
         likes = status.favorite_count
         time_created = status.created_at
@@ -101,13 +98,17 @@ if __name__ == '__main__':
         # if tweet is in DB do not insert
         dbnames = conn.list_database_names()
         if 'tweets' in dbnames:
+            db = conn.get_database('tweets')
+            collection = db.get_collection("tweet_data")
             
-            filter = {"text":tweet["text"],
-                      "tweet_time":tweet["tweet_time"]}
+            filter = {"text":tweet["text"]} #"tweet_time":tweet["tweet_time"]
             cursor = collection.find(filter)
+            
+            
             if cursor.count()==0:
                 collection.insert_one(tweet)
-                print("inserted")
+                print("inserted to exiting DB ")
+            
         else:
             db = conn.tweets        #building a database db named tweets
             collection = db.tweet_data #building table to store tweets
@@ -116,4 +117,7 @@ if __name__ == '__main__':
             cursor = collection.find(filter)
             if cursor.count()==0:
                 collection.insert_one(tweet)
-                print("inserted")
+                print("inserted to new DB")
+                
+                
+
